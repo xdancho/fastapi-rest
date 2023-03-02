@@ -29,4 +29,6 @@ async def func_home():
 
 @app.get("/ping")
 async def func_ping():
+    fastapi_logger.info("info")
+    fastapi_logger.error("error")
     return {"message": "pong"}
