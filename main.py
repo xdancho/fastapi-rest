@@ -4,9 +4,9 @@ from fastapi import FastAPI
 
 version = f"{sys.version_info.major}.{sys.version_info.minor}"
 
-api = FastAPI()
+app = FastAPI()
 
-@api.get("/")
+@app.get("/")
 async def home():
     message = f"Hello world! From FastAPI running on Uvicorn with Gunicorn. Using Python {version}"
     return {"message": message}
